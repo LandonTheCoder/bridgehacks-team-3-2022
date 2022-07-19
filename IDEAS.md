@@ -8,3 +8,4 @@ Jane:
   I'm great! How are you?
 ```
  - Alternatively, use a storage format like JSON or XML, and generate that nice text from it.
+ - For speech recognition: https://pypi.org/project/automatic-speech-recognition/
