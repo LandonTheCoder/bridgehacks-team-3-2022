@@ -10,8 +10,7 @@ setup(name="Scribe",
       author="LandonTheCoder and aaravm10",
       author_email="100165458+LandonTheCoder@users.noreply.github.com",
       url="https://github.com/LandonTheCoder/bridgehacks-team-2-2022",
-      packages=[""],
+      packages=["scribe"],
 ##      scripts=[""],
-      requires=["automatic_speech_recognition"]
-                   }
+      requires=["SpeechRecognition"]
      )
