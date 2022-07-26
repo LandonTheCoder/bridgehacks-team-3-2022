@@ -8,26 +8,20 @@ tmp_remlist = ['that ', 'the ', 'what ', 'and ', 'them ', '[Tt]hey ', 'have ',
 remlist = []
 for x in tmp_remlist:
     remlist.append(re.compile(x))
-print(remlist)
+##print(remlist)
 
-
-'''
-for i in range(len(splist)):
-    for word in remlist:
-        splist[i] = splist[i].replace(word, "")
-
-for i in range(len(splist)):
-    splist[i] = "-" + splist[i]
-
-for i in splist:
-    print(i)
-'''
+tmp_sublist = [("I'm", "Am")]
+sublist = {}
+for x in tmp_sublist:
+    sublist[re.compile(x[0])] = x[1]
+##print(sublist)
 
 def filter_sentence(sentence, rmlist=remlist):
     for word in rmlist:
         # Match.sub(replace_with_string, input_sentence)
         sentence = word.sub("", sentence)
-    sentence = re.compile("I'm").sub("Am", sentence)
+    for x in sublist.keys():
+        sentence = x.sub(sublist[x], sentence)
     return " - " + sentence.strip()
 def main(rmlist):
     for x in mystr:
