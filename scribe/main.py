@@ -21,7 +21,7 @@ def main(passed_args=None):
         print(y)
     fobj = open(args.outfile, "w+")
     notestr = "\n".join(filtered_phraselist) + "\n"
-    print("notestr =", notestr)
+    print("notestr:\n%s" %notestr)
     fobj.write(notestr)
     fobj.close()
 main()
